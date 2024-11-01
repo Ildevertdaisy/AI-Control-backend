@@ -24,6 +24,8 @@ def control_host():
         sse.publish({"command": "snip"}, type="command")
     elif command == "webcam":
         sse.publish({"command": "webcam"}, type="command")
+    elif command == "stop_webcam":
+        sse.publish({"command": "stop_webcam"}, type="command")
     else:
         sse.publish({"command": "no action"}, type="command")
 
